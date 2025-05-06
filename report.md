@@ -22,7 +22,13 @@ Thành công tải file yêu cầu
 
 EX3
 
+Thành công tải file và stream dữ liệu
+
+![1746555240672](image/report/1746555240672.png)
+
 EX4
+
+Thành công tìm và chuyển file từ json thành csv.![1746555284194](image/report/1746555284194.png)
 
 EX5
 
