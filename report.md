@@ -25,7 +25,8 @@ EX3
 EX4
 
 EX5
-
+![1746541806](image/report/1746541806.png.png)
 EX6
 
 EX7
+![1746542087](image/report/1746542087.png)
