@@ -25,8 +25,15 @@ EX3
 EX4
 
 EX5
-![1746541806](image/report/1746541806.png.png)
+
+Nhập dữ liệu thành công
+
+![1746541806](image/report/1746541806.png)
+
 EX6
 
 EX7
+
+Thành công xử lý và biến đổi dữ liệu
+
 ![1746542087](image/report/1746542087.png)
