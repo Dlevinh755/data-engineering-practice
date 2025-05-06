@@ -10,7 +10,15 @@ REPORT
 
 EX1
 
+Thành công tải và giải nến các file
+
+![1746519180450](image/report/1746519180450.png)
+
 EX2
+
+Thành công tải file yêu cầu
+
+![1746519545186](image/report/1746519545186.png)
 
 EX3
 
