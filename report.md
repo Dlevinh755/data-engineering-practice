@@ -38,6 +38,10 @@ Nhập dữ liệu thành công
 
 EX6
 
+Gặp lỗi
+
+![1746558416398](image/report/1746558416398.png)![1746558416398](image/report/1746558416398.png)
+
 EX7
 
 Thành công xử lý và biến đổi dữ liệu
