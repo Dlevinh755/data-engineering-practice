@@ -43,3 +43,8 @@ EX7
 Thành công xử lý và biến đổi dữ liệu
 
 ![1746542087](image/report/1746542087.png)
+
+COMPOSE DOCKER CONTAINER
+
+![1746568893508](image/report/1746568893508.png)
+![1746568862475](image/report/1746568862475.png)
