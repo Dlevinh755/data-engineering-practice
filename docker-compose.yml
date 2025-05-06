@@ -1,0 +1,39 @@
+version: '3.0'
+
+services:
+  vinhpostgres:
+    image: postgres:14-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=vinhdb
+    ports:
+      - 5432:5432
+  data-extract-container:
+    build:
+      context: .             # dùng Dockerfile trong thư mục hiện tại
+      dockerfile: Dockerfile
+    image: apache/airflow:2.3.0-python3.8
+    container_name: airflow-webserver
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./Exercises:/var/tmp/app
+      - ./downloads:/var/tmp/app/downloads
+    ports:
+      - 8080:8080
+    command: bash -c '(airflow db init && airflow users create --username admin --password admin --firstname vinh --lastname le --role Admin --email levinh0705@gmail.com); airflow webserver & airflow scheduler'
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - 80:80
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      - vinhpostgres
+volumes:
+  dags:
+  data_local:
+  pgadmin_data:
