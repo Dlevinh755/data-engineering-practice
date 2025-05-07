@@ -38,7 +38,7 @@ def json_to_csv(json_file_path):
             writer.writerows(flattened_data)
 
 def main():
-    json_files = glob.glob('data/**/*.json', recursive=True)
+    json_files = glob.glob('/var/tmp/app/Exercise_4/data/**/*.json', recursive=True)
     for json_file in json_files:
         print(f'Processing {json_file}...')
         json_to_csv(json_file)

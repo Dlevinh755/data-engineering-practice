@@ -156,4 +156,4 @@ email_operator = PythonOperator(
     dag=dag
 )
 
-train_model >> email_operator
+crawl_data>>train_model >> email_operator

@@ -3,18 +3,9 @@ import os
 from zipfile import ZipFile, BadZipFile
 import shutil
 class Bai1:
-    def __init__(self, download_uris, base_folder="Exercises/Exercise_1/downloads"):
+    def __init__(self, download_uris, base_folder="/var/tmp/app/downloads/ex1_data"):
         self.download_uris = download_uris
-        self.base_path = os.getcwd()
-        self.download_folder = os.path.join(self.base_path, base_folder)
-
-    def create_download_folder(self):
-        if not os.path.exists(self.download_folder):
-            os.makedirs(self.download_folder)
-            print("Created downloads folder successfully.")
-        else:
-            print("Folder already exists.")
-
+        self.download_folder = base_folder
     def download_files(self):
         for url in self.download_uris:
             file_path = os.path.join(self.download_folder, os.path.basename(url))
@@ -49,8 +40,6 @@ class Bai1:
             print("Removed __MACOSX folder.")
 
     def process(self):
-        print("Creating download folder...")
-        self.create_download_folder()
         print("Downloading files...")
         self.download_files()
         print("Extracting files...")
@@ -58,13 +47,13 @@ class Bai1:
 
 def main():
     urls = [
-        "https://divvy-tripdata.s3.amazonaws.com/Divvy_Trips_2018_Q4.zip", 
+        #"https://divvy-tripdata.s3.amazonaws.com/Divvy_Trips_2018_Q4.zip", 
         "https://divvy-tripdata.s3.amazonaws.com/Divvy_Trips_2019_Q1.zip",
-        "https://divvy-tripdata.s3.amazonaws.com/Divvy_Trips_2019_Q2.zip",
+        #"https://divvy-tripdata.s3.amazonaws.com/Divvy_Trips_2019_Q2.zip",
         "https://divvy-tripdata.s3.amazonaws.com/Divvy_Trips_2019_Q3.zip",
         "https://divvy-tripdata.s3.amazonaws.com/Divvy_Trips_2019_Q4.zip",
-        "https://divvy-tripdata.s3.amazonaws.com/Divvy_Trips_2020_Q1.zip",
-        "https://divvy-tripdata.s3.amazonaws.com/Divvy_Trips_2220_Q1.zip",  # invalid URL for testing
+        #"https://divvy-tripdata.s3.amazonaws.com/Divvy_Trips_2020_Q1.zip",
+        #"https://divvy-tripdata.s3.amazonaws.com/Divvy_Trips_2220_Q1.zip",  # invalid URL for testing
     ]
     manager = Bai1(urls)
     manager.process()

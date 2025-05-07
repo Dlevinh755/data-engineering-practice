@@ -37,10 +37,9 @@ Nhập dữ liệu thành công
 ![1746541806](image/report/1746541806.png)
 
 EX6
+![1746579013394](image/report/1746579013394.png)
 
-Gặp lỗi
-
-![1746558416398](image/report/1746558416398.png)![1746558416398](image/report/1746558416398.png)
+![1746579069325](image/report/1746579069325.png)
 
 EX7
 
@@ -50,5 +49,10 @@ Thành công xử lý và biến đổi dữ liệu
 
 COMPOSE DOCKER CONTAINER
 
-![1746568893508](image/report/1746568893508.png)
-![1746568862475](image/report/1746568862475.png)
+![1746578995194](image/report/1746578995194.png)
+
+![1746579104231](image/report/1746579104231.png)
+
+LAB_8 CRAWLDATA và TRAINMODEL
+
+- Thành công cào d![1746579164832](image/report/1746579164832.png)ữ liệu và train model nhwung không gửi được mail cho không có api_key dịch vụ

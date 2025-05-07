@@ -101,8 +101,8 @@ class Bai5:
             print(f" Có lỗi xảy ra: {str(e)}")
 
 if __name__ == "__main__":
-    host = "postgres"
-    database = "postgres"
+    host = "vinhpostgres"
+    database = "vinhdb"
     user = "postgres"
     pas = "postgres"
     
@@ -111,5 +111,5 @@ if __name__ == "__main__":
     conn = psycopg2.connect(host=host, database=database, user=user, password=pas,port=port)
     cur = conn.cursor()
         
-    manager = Bai5(conn, data_dir='data')
+    manager = Bai5(conn, data_dir='/var/tmp/app/Exercise_5/data')
     manager.run()

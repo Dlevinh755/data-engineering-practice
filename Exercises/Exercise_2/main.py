@@ -5,11 +5,11 @@ import pandas as pd
 from datetime import datetime
 
 class Bai2:
-    def __init__(self, base_url, target_date, output_folder="Exercises/Exercise_2"):
+    def __init__(self, base_url, target_date, output_folder="/var/tmp/app/downloads/ex2_data"):
         self.base_url = base_url
         self.target_date = target_date
         self.target_datetime = datetime.strptime(target_date, "%Y-%m-%d %H:%M")
-        self.output_folder = os.path.join(os.getcwd(), output_folder)
+        self.output_folder =  output_folder
         os.makedirs(self.output_folder, exist_ok=True)
 
     def find_matching_file(self, soup):

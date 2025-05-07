@@ -1,8 +1,11 @@
+apache-airflow==2.5.0
+pandas
+numpy
+tensorflow>=2.12
+scikit-learn>=1.2
+sendgrid>=6.0.0
 requests==2.27.1
-pandas==2.2.3
 psycopg2-binary
 pytest
-pyspark
-zipfile
-shutil
-bs4
+pyspark==3.4.1
+beautifulsoup4

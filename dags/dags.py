@@ -55,6 +55,11 @@ Bai7 = BashOperator(
     bash_command='python /var/tmp/app/Exercise_7/main.py',
     dag=dag
 )
+Bai6 = BashOperator(
+    task_id='Ex6_pyspark_job',
+    bash_command='python /var/tmp/app/Exercise_6/main.py',
+    dag=dag
+)
 
 
 
@@ -66,3 +71,4 @@ Bai5
 Bai3
 Bai1
 Bai7
+Bai6

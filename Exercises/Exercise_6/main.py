@@ -6,7 +6,7 @@ from pyspark.sql.functions import avg, count, col, desc, to_date, year, month, e
 from pyspark.sql.window import Window
 
 
-def unzip_data(zip_folder="data", extract_to="data/unzipped"):
+def unzip_data(zip_folder, extract_to):
     """
     Giải nén tất cả các file .zip trong thư mục zip_folder
     vào thư mục extract_to.
@@ -86,7 +86,7 @@ def top_10_ages_longest_shortest_trips(df):
 
 def main():
     # 1. Giải nén file .zip
-    unzip_data(zip_folder="data", extract_to="data/unzipped")
+    unzip_data(zip_folder="/var/tmp/app/Exercise_6/data", extract_to="/var/tmp/app/downloads/ex6_data")
 
     # 2. Tạo SparkSession (sử dụng cấu hình mặc định trên Windows/Linux)
     spark = (
@@ -97,7 +97,7 @@ def main():
 
     # 3. Đọc CSV từ thư mục giải nén (relative path)
     #    Trên Windows, Spark sẽ tìm file tương đối tại thư mục làm việc hiện tại.
-    data_dir = os.path.join(os.getcwd(), "data", "unzipped")
+    data_dir = "/var/tmp/app/downloads/ex6_data"
     data_path = os.path.join(data_dir, "*.csv")
     df = read_data(spark, data_path)
 
